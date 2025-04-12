@@ -1,3 +1,6 @@
+import Profile from "./Profile";
+import AboutPage from "./AboutPage";
+
 function MyButton() {
   return (
     <button>
@@ -8,9 +11,13 @@ function MyButton() {
 
 export default function App() {
   return (
-    <div>
-      <h1>Welcome to my app</h1>
-      <MyButton />
-    </div>
+    <>
+      <div>
+        <h1>Welcome to my app</h1>
+        <MyButton />
+      </div>
+      <AboutPage />
+      <Profile />
+    </>
   );
 }
