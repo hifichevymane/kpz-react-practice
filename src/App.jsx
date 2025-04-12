@@ -1,5 +1,6 @@
 import Profile from "./Profile";
 import AboutPage from "./AboutPage";
+import ShoppingList from "./ShoppingList";
 
 function MyButton() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
       <AboutPage />
       <Profile />
       {isLoggedIn ? <h2>Admin Panel</h2> : <h2>Login Form</h2>}
+      <ShoppingList />
     </>
   );
 }
