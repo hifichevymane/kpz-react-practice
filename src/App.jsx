@@ -2,14 +2,18 @@ import Profile from "./Profile";
 import AboutPage from "./AboutPage";
 import ShoppingList from "./ShoppingList";
 
+import { useState } from "react";
+
 function MyButton() {
+  const [count, setCount] = useState(0);
+
   function handleClick() {
-    alert('You clicked me!');
+    setCount(count + 1);
   }
 
   return (
     <button onClick={handleClick}>
-      I'm a button
+      Clicked {count} times
     </button>
   );
 }
@@ -27,6 +31,11 @@ export default function App() {
       <Profile />
       {isLoggedIn ? <h2>Admin Panel</h2> : <h2>Login Form</h2>}
       <ShoppingList />
+      <div>
+        <h1>Counters that update separately</h1>
+        <MyButton />
+        <MyButton />
+      </div>
     </>
   );
 }
