@@ -9,6 +9,8 @@ function MyButton() {
   );
 }
 
+const isLoggedIn = true;
+
 export default function App() {
   return (
     <>
@@ -18,6 +20,7 @@ export default function App() {
       </div>
       <AboutPage />
       <Profile />
+      {isLoggedIn ? <h2>Admin Panel</h2> : <h2>Login Form</h2>}
     </>
   );
 }
